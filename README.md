@@ -44,23 +44,25 @@ Foi utilizada a estratégia de fazer o bind dos métodos *clearMemory()* , *setO
 
 1.  É feito um teste para ver se o número que está sendo digitado agora é o primeiro ( se é o de indice zero), se for o estado será alterado, passando o valor da operação que veio por parâmetro, sinaliza que atualmente está sendo trabalhado o segundo número e que a tela precisará ser limpa.
 
-2. Se a afirmação anterior for falsa outro bloco será executado, nesse bloco é criada uma constante para sinalizar se a operação passada é um sinal de igual (=), dessa forma, o valor dessa constante dependerá desse resultado.
+2. Se a afirmação anterior for falsa outro bloco será executado, nesse bloco é criada uma constante(equals) para sinalizar se a operação passada é um sinal de igual (=), dessa forma, o valor dessa constante dependerá desse resultado.
 
 3. A operação que foi recebida agora é armazenada em uma constante.
 
-4. É criada uma constante clocnando os valores de estado dos valores númericos digitados.
+4. É criada uma constante clonando os valores de estado dos valores númericos digitados.
 
-5. A operação é executada e o valor é armazenado no primeiro espaço para o **valor 1**(values[0]). Se qualquer problema ocorrer, será guardado novamente os dados do **valor 1** no espaço de **valor 1**.
+5. A operação é executada e o valor, de resultado, é armazenado no primeiro no espaço para o **valor 1**(values[0]). Se qualquer problema ocorrer, será guardado novamente os dados do **valor 1** no espaço de **valor 1**.
 
-6. Finalmente o estado é armazenado sendo que o valor exibido no display é sempre o resultado armazenado em **valor 1** (values[0]). Se a operação tiver valor de igual(=), então, o valor de *operation* será null senão, será o valor passado como parametro no método e esse valor também será usado no teste de qual numero atual esta sendo trabalhado, se for verdadeiro, será o **valor 1**(values[0]) senão o **valor 2**(values[1]). *ClearDisplay* também dependera de um teste com equals, mas dessa vez testando o seu valor avesso e por fim os valores *(values)* também serão atualizados.
+6. Finalmente o estado é armazenado, sendo que o valor exibido no display é sempre o resultado armazenado em **valor 1** (values[0]). Se a operação tiver valor de igual(=), então, o valor de *operation* será null senão, será o valor passado como parametro no método e esse valor também será usado no teste de qual numero atual esta sendo trabalhado, se for verdadeiro, será o **valor 1**(values[0]) senão o **valor 2**(values[1]). *ClearDisplay* também dependera de um teste que verifica se foi passado sinal de igual como operação, mas dessa vez testando o seu valor avesso( se for true retornará false, se for false, retornará true) e por fim os valores *(values)* também serão atualizados.
 
-**ddDigit()** : Este método recebe tudo o que é digitado nos botões da aplicação. Nela também serão feitos alguns testes antes de também mudar algum estado:
+**addDigit()** : Este método recebe tudo o que é digitado nos botões da aplicação. Nela também serão feitos alguns testes antes de também mudar algum estado:
 
 1. Se o valor digitado tiver ponto (.) e o valor de *displayValue* já contiver ponto também, então nada será computado dessa operação.
 
-2. Uma constante vai sinalizar se será preciso limpar a tela ou não por meio de um teste que verifica se o valor de displayValue é zero ou se ClearDisplay já é true. Este teste serve também para que seja digitado zeros desnecessários na calculadora.
+2. Uma constante vai sinalizar se será preciso limpar a tela ou não por meio de um teste que verifica se o valor de *displayValue* é zero ou se *ClearDisplay* já é **true**. Este teste serve também para que seja digitado zeros(0) desnecessários na calculadora.
 
-3. É feito um teste : Se *clearDisplay* for verdadeiro então o valor atual será vazio senão será o valor que está sendo exibido atualmente na tela.
-4. O valor de displayValue será o valor do valor atual somado ao valor que veio como parâmetro.
-5. O estado é então atualizado: *DisplayValue* (valor atual) é atualizado e *clearDisplay* é sinalizado para falso. 
-6. E o último teste executará a operacão de atualizar o estado dos valores (values) caso o valor digitado não seja um ponto e atualizará conforme o número atual que estiver sendo trabalhado.
+3. É feito um teste : Se *clearDisplay* for verdadeiro então o valor atual será vazio senão será o valor que está sendo exibido atualmente na tela *(displayValue)*.
+4. O valor de *displayValue* será o valor do valor atual somado ao valor que veio como parâmetro.
+5. O estado é então atualizado: *DisplayValue* (valor atual) é atualizado e *clearDisplay* é sinalizado para falso *(false)*. 
+6. E o último teste executará a operacão de atualizar o estado dos valores (values) caso o valor digitado não seja um ponto *(.)* e atualizará conforme o número atual que estiver sendo trabalhado.
+
+Veja a aplicação funcionando em : [https://calculadorareact.netlify.app/]
