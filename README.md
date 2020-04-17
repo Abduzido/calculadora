@@ -24,10 +24,15 @@ Esse é o componente que controla todos os outros e é onde acontece toda a part
 Nesse ponto, para manter estado da aplicação, foi criada uma constante **( initialState )** com um objeto que contém as propriedades essenciais para a calculadora:
 
 **displayValue** : A propriedade que altera o que é exibido no componente **Display**
+
 **ClearDisplay** : A propriedade que sinaliza se será necessário limpar a tela .
-**Operation** : A propriedade que sinaliza que operação atualmente está sendo aplicada, digitada pelo usuário
-**values** : Quais os dois valores que estão na memória para realizar operação no momento neste array
-**current** : Qual o indice do array de values atual, ou seja, em qual número atualmente está a operação
+
+**Operation** : A propriedade que sinaliza que operação atualmente está sendo aplicada, digitada pelo usuário.
+
+**values** : Quais os dois valores que estão na memória para realizar operação no momento neste array.
+
+**current** : Qual o indice do array de values atual, ou seja, em qual número atualmente está a operação.
+
 
 É inicializado o estado (state) clonando o objeto **initialState** já dentro do escopo do bloco do componente.
 
