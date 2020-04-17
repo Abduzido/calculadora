@@ -1,9 +1,34 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Calculadora React
+
+# Calculadora React
+[![Netlify Status](https://api.netlify.com/api/v1/badges/514ad0bc-7e3b-40de-8705-cf143d5cd3ba/deploy-status)](https://app.netlify.com/sites/calculadorareact/deploys)
 
 Esse foi um projeto de estudo de implementação de uma calculadora modelada em React
 
+## Features
+* Calculadora matemática básica com as 4 operações
+* Tamanho responsivo para telas de celular, desktop e tablet.
+* Tem função de limpar a tela
+* Ignora digitação de zeros desnecessários
+
+## Pré requisitos
+
+* Node ( recomendado versão 8 ou maior)
+
+## Instalando localmente
+
+### Access Locally
+```
+$ git clone git@github.com:Abduzido/calculadora.git
+$ cd calculadora
+$ yarn
+$ npm run develop
+```
+Pra testar localmente, você precisará rodar o build de produção do site: 
+```
+$ npm run build
+$ npm run serve
+```
 ### Vamos por partes explicar como essa calculadora foi construída.
 
 Foram criados 3 componentes, sendo um principal **(Calculator.jsx)** que monta toda a aplicação e outro que controla o display do que é exibido na tela **(Display.jsx)** e por fim o componente que imprime os botoões na tela **(Button.jsx)**.
